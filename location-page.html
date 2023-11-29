@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medi-Tech</title>
+  <link rel="icon" type="image/x-icon" href="logo in.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('bg.jpg'); /* Replace 'background_image.jpg' with your image file */
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 100px; /* Adjust as needed */
+    }
+   
+    
+    .address {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .header-box {
+      background: black;
+      position: absolute;
+      top: 0px;
+      width: 88%;
+      height: 70px;
+      padding: 15px;
+      text-align: top;
+    }
+    .marquee-text {
+      color: white;
+      font-size: 24px;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0px;
+      animation: marquee 10s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    img {
+      width: 100%; /* Increase the width of the image */
+      height: 90%;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-box">
+      <marquee class="marquee-text"><h1>Hospital Location</h1></marquee>
+    </div>
+    <img src="loc.png" alt="Hospital Image"> <!-- Replace 'hospital_image.jpg' with your hospital image file -->
+    
+    <div class="address">
+      <p>CWVM+5JP,NH4 HIWAY SHAMANURU,Saraswathi Nagar,Jayanagara B Block</p>
+      <p>DAVANGERE,KARNATAKA,INDIA</p>
+      <p>577005</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediOrder - Online Medicine Ordering System</title>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MediOrder</h1>
+    </header>
+
+    <section id="products">
+        <!-- Product listings go here -->
+        <div class="product">
+            <img src="medicine1.jpg" alt="Medicine 1">
+            <h3>Medicine 1</h3>
+            <p>₹200.00</p>
+            <button onclick="addToCart('Medicine 1', 200.00)">Add to Cart</button>
+        </div>
+
+        <!-- Add more products as needed -->
+
+    </section>
+
+    <section id="cart">
+        <!-- Shopping cart content goes here -->
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p>Total: ₹<span id="total-price">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <footer>
+        <p>Contact us at <a href="mailto:info@mediorder.com">info@mediorder.com</a></p>
+    </footer>
+
+    <script>
+        // Add your JavaScript logic here
+
+        function addToCart(productName, price) {
+            // Add logic to add the product to the shopping cart
+            // Update the cart items and total price
+        }
+
+        function checkout() {
+            // Add logic to process the order and redirect to a payment page
+        }
+    </script>
+
+</body>
+</html>

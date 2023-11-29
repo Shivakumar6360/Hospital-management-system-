@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Tech</title>
+    <link rel="icon" type="image/x-icon" href="logo in.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4300fc;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #000000;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .images-box {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .basic-data-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Patient Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="basic-data-box">
+            <h2>Basic Information</h2>
+            <p>Name: dinesh</p>
+            <p>Age: 35</p>
+            <p>Gender: Male</p>
+        </div>
+
+        <div class="health-info-box">
+            <h2>Health Information</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Health Issue</th>
+                        <th>Treatment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>High Blood Pressure</td>
+                        <td>Medication, Lifestyle changes</td>
+                    </tr>
+                    <tr>
+                        <td>Diabetes</td>
+                        <td>Insulin, Diet control</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="images-box">
+            <img src="patient1 image.jpg" alt="Patient Image 1" class="image">
+            <img src="" alt="" class="image">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+</body>
+</html>

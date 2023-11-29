@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Tech</title>
+    <link rel="icon" type="image/x-icon" href="logo in.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #receipt {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PAYMENT SECTION</h1>
+    </header>
+
+    <div class="container">
+        <form id="paymentForm" onsubmit="generateReceipt(event)">
+            <h2>Payment Details</h2>
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" required>
+                <option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <label for="paymentAmount">Payment Amount:</label>
+            <input type="number" id="paymentAmount" required>
+
+            <label for="tabletsAmount">Tablets Amount:</label>
+            <input type="number" id="tabletsAmount" required>
+
+            <label for="dressingAmount">Dressing Amount:</label>
+            <input type="number" id="dressingAmount" required>
+
+            <label for="taxAmount">Tax Amount:</label>
+            <input type="number" id="taxAmount" required>
+
+            <label for="totalAmount">Total Amount:</label>
+            <input type="number" id="totalAmount" disabled>
+
+            <button type="submit">Generate Receipt</button>
+        </form>
+
+        <div id="receipt">
+            <h2>Receipt</h2>
+            <p><strong>Payment Method:</strong> <span id="receiptPaymentMethod"></span></p>
+            <p><strong>Payment Amount:</strong> <span id="receiptPaymentAmount"></span></p>
+            <p><strong>Tablets Amount:</strong> <span id="receiptTabletsAmount"></span></p>
+            <p><strong>Dressing Amount:</strong> <span id="receiptDressingAmount"></span></p>
+            <p><strong>Tax Amount:</strong> <span id="receiptTaxAmount"></span></p>
+            <p><strong>Total Amount:</strong> <span id="receiptTotalAmount"></span></p>
+            <p><strong>Reception Note:</strong> <span id="receptionNote"></span></p>
+            <p><strong>Payment Status:</strong> <span id="paymentStatus"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function generateReceipt(event) {
+            event.preventDefault();
+
+            // Get values from the form
+            var paymentMethod = document.getElementById("paymentMethod").value;
+            var paymentAmount = document.getElementById("paymentAmount").value;
+            var tabletsAmount = document.getElementById("tabletsAmount").value;
+            var dressingAmount = document.getElementById("dressingAmount").value;
+            var taxAmount = document.getElementById("taxAmount").value;
+
+            // Calculate total amount
+            var totalAmount = parseInt(paymentAmount) + parseInt(tabletsAmount) + parseInt(dressingAmount) + parseInt(taxAmount);
+
+            // Display values in receipt
+            document.getElementById("receiptPaymentMethod").innerText = paymentMethod;
+            document.getElementById("receiptPaymentAmount").innerText = paymentAmount;
+            document.getElementById("receiptTabletsAmount").innerText = tabletsAmount;
+            document.getElementById("receiptDressingAmount").innerText = dressingAmount;
+            document.getElementById("receiptTaxAmount").innerText = taxAmount;
+            document.getElementById("receiptTotalAmount").innerText = totalAmount;
+
+            // Set reception note and payment status
+            var receptionNote = "Thank you for your payment!";
+            var paymentStatus = "Paid";
+
+            // Display receipt and details
+            document.getElementById("receptionNote").innerText = receptionNote;
+            document.getElementById("paymentStatus").innerText = paymentStatus;
+            document.getElementById("receipt").style.display = "block";
+        }
+    </script>
+</body>
+</html>

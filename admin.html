@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Tech</title>
+    <link rel="icon" type="image/x-icon" href="logo in.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('admin_dashboard_background.jpg') center/cover no-repeat;
+            color: white;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #fff;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .about-section {
+            margin-bottom: 40px;
+        }
+
+        .moving-text {
+            animation: moveText 5s infinite;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(50px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="about-section">
+            <h2>About the Hospital</h2>
+            <p>Welcome to our hospital. We are committed to providing quality healthcare...</p>
+            <ul>
+                <li>State-of-the-art facilities</li>
+                <li>Experienced medical staff</li>
+                <li>Comprehensive healthcare services</li>
+            </ul>
+            <p class="moving-text">We strive for excellence in patient care.</p>
+            <img src="hospital_images.jpg" alt="Hospital Images" class="moving-text">
+        </div>
+
+        <div class="staff-section">
+            <h2>Staff Information</h2>
+            <!-- Add staff information and images here -->
+        </div>
+
+        <div class="location-section">
+            <h2>Location Information</h2>
+            <p>Our hospital is located at:</p>
+            <address>
+                123 Medical Street<br>
+                Cityville, State, Country<br>
+                Zip Code: 12345
+            </address>
+            <img src="hospital_location.jpg" alt="Hospital Location Image">
+        </div>
+    </div>
+</body>
+</html>

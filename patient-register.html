@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Tech</title>
+    <link rel="icon" type="image/x-icon" href="logo in.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bg.jpg') center/cover no-repeat;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><marquee width="40%" direction="right" height="30%">PATIENT REGISTRATION</marquee></h1>
+    </header>
+
+    <div class="container">
+        <form id="registrationForm" onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="healthIssues">Health Issues:</label>
+            <input type="text" id="healthIssues" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" rows="4" required></textarea>
+
+            <label for="emergencyType">Type of Emergency:</label>
+            <input type="text" id="emergencyType" required>
+
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            // Get values from the form
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var gender = document.getElementById("gender").value;
+            var healthIssues = document.getElementById("healthIssues").value;
+            var address = document.getElementById("address").value;
+            var emergencyType = document.getElementById("emergencyType").value;
+
+            // Placeholder for backend logic (store data, etc.)
+            console.log("Name: " + name);
+            console.log("Age: " + age);
+            console.log("Gender: " + gender);
+            console.log("Health Issues: " + healthIssues);
+            console.log("Address: " + address);
+            console.log("Type of Emergency: " + emergencyType);
+
+            // You can send this data to a server for further processing or storage
+            // Example: Send data to a server using AJAX/fetch
+            // fetch('your-backend-endpoint', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({
+            //         name: name,
+            //         age: age,
+            //         gender: gender,
+            //         healthIssues: healthIssues,
+            //         address: address,
+            //         emergencyType: emergencyType,
+            //     }),
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     console.log('Success:', data);
+            // })
+            // .catch((error) => {
+            //     console.error('Error:', error);
+            // });
+        }
+    </script>
+</body>
+</html>
